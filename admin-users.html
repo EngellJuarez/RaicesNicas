@@ -55,251 +55,250 @@
         </div>
 
         <!-- Users List -->
-        <div class="flex-1 overflow-y-auto px-4 py-4 pb-20">
-            <div class="space-y-3">
-                <!-- Volunteer User -->
-                <div class="bg-white rounded-lg shadow-sm p-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <span class="text-blue-600 font-semibold">MR</span>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">María Rodríguez</h3>
-                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntaria</span>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activa</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    maria.rodriguez@email.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-calendar"></i>
-                                    Miembro desde Mar 2023
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-star"></i>
-                                    4.8 (15 reseñas)
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('maria')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="sendMessage('maria')" class="bg-blue-600 text-white p-2 rounded text-sm hover:bg-blue-700">
-                                <i class="fas fa-comment"></i>
-                            </button>
-                            <button onclick="suspendUser('maria')" class="bg-yellow-600 text-white p-2 rounded text-sm hover:bg-yellow-700">
-                                <i class="fas fa-pause"></i>
-                            </button>
-                        </div>
-                    </div>
+<div class="flex-1 overflow-y-auto px-4 py-4 pb-20">
+    <div class="space-y-3">
+        <!-- Volunteer User -->
+        <div class="bg-white rounded-lg shadow-sm p-4">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-blue-600 font-semibold">MR</span>
                 </div>
-
-                <!-- Organization User -->
-                <div class="bg-white rounded-lg shadow-sm p-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                            <i class="fas fa-building text-green-600"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">Granja Ecológica</h3>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Organización</span>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Verificada</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    info@granjapachamama.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Costa Rica
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-clipboard-list"></i>
-                                    15 oportunidades
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('granja')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="sendMessage('granja')" class="bg-blue-600 text-white p-2 rounded text-sm hover:bg-blue-700">
-                                <i class="fas fa-comment"></i>
-                            </button>
-                            <button onclick="verifyOrganization('granja')" class="bg-purple-600 text-white p-2 rounded text-sm hover:bg-purple-700">
-                                <i class="fas fa-certificate"></i>
-                            </button>
-                        </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">María Rodríguez</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntaria</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activa</span>
                     </div>
-                </div>
-
-                <!-- Volunteer User 2 -->
-                <div class="bg-white rounded-lg shadow-sm p-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                            <span class="text-purple-600 font-semibold">JP</span>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">Juan Pablo Morales</h3>
-                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntario</span>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activo</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    juan.morales@email.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-calendar"></i>
-                                    Miembro desde Ene 2024
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-star"></i>
-                                    4.9 (8 reseñas)
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('juan')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="sendMessage('juan')" class="bg-blue-600 text-white p-2 rounded text-sm hover:bg-blue-700">
-                                <i class="fas fa-comment"></i>
-                            </button>
-                            <button onclick="suspendUser('juan')" class="bg-yellow-600 text-white p-2 rounded text-sm hover:bg-yellow-700">
-                                <i class="fas fa-pause"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suspended User -->
-                <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-400">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                            <span class="text-red-600 font-semibold">CM</span>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">Carlos Mendoza</h3>
-                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntario</span>
-                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Suspendido</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    carlos.mendoza@email.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    Suspendido por reportes
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('carlos')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="reactivateUser('carlos')" class="bg-green-600 text-white p-2 rounded text-sm hover:bg-green-700">
-                                <i class="fas fa-play"></i>
-                            </button>
-                            <button onclick="banUser('carlos')" class="bg-red-600 text-white p-2 rounded text-sm hover:bg-red-700">
-                                <i class="fas fa-ban"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Organization Pending Verification -->
-                <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-400">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                            <i class="fas fa-building text-yellow-600"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">Hostel Aventura</h3>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Organización</span>
-                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Pendiente verificación</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    info@hostelaventura.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Guatemala
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-clock"></i>
-                                    Registrado hace 3 días
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('hostel')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="verifyOrganization('hostel')" class="bg-green-600 text-white p-2 rounded text-sm hover:bg-green-700">
-                                <i class="fas fa-check"></i>
-                            </button>
-                            <button onclick="rejectVerification('hostel')" class="bg-red-600 text-white p-2 rounded text-sm hover:bg-red-700">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- More users... -->
-                <div class="bg-white rounded-lg shadow-sm p-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                            <span class="text-teal-600 font-semibold">AR</span>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center gap-2 mb-1">
-                                <h3 class="font-semibold">Ana Ruiz</h3>
-                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntaria</span>
-                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activa</span>
-                            </div>
-                            <div class="flex items-center gap-4 text-sm text-slate-500">
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-envelope"></i>
-                                    ana.ruiz@email.com
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-calendar"></i>
-                                    Miembro desde Feb 2024
-                                </span>
-                                <span class="flex items-center gap-1">
-                                    <i class="fas fa-star"></i>
-                                    5.0 (3 reseñas)
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-1">
-                            <button onclick="viewUserDetails('ana')" class="bg-gray-600 text-white p-2 rounded text-sm hover:bg-gray-700">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button onclick="sendMessage('ana')" class="bg-blue-600 text-white p-2 rounded text-sm hover:bg-blue-700">
-                                <i class="fas fa-comment"></i>
-                            </button>
-                            <button onclick="suspendUser('ana')" class="bg-yellow-600 text-white p-2 rounded text-sm hover:bg-yellow-700">
-                                <i class="fas fa-pause"></i>
-                            </button>
-                        </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">maria.rodriguez@email.com</p>
+                    <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-calendar"></i>
+                            Mar 2023
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-star"></i>
+                            4.8
+                        </span>
                     </div>
                 </div>
             </div>
+            <!-- Action Buttons -->
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('maria')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="sendMessage('maria')" class="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-xs hover:bg-blue-700">
+                    <i class="fas fa-comment mr-1"></i>
+                    Mensaje
+                </button>
+                <button onclick="suspendUser('maria')" class="flex-1 bg-yellow-600 text-white py-2 px-3 rounded text-xs hover:bg-yellow-700">
+                    <i class="fas fa-pause mr-1"></i>
+                    Suspender
+                </button>
+            </div>
         </div>
+
+        <!-- Organization User -->
+        <div class="bg-white rounded-lg shadow-sm p-4">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-building text-green-600"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">Granja Ecológica Pachamama</h3>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Organización</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Verificada</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">info@granjapachamama.com</p>
+                    <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Costa Rica
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-clipboard-list"></i>
+                            15 oportunidades
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('granja')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="sendMessage('granja')" class="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-xs hover:bg-blue-700">
+                    <i class="fas fa-comment mr-1"></i>
+                    Mensaje
+                </button>
+                <button onclick="verifyOrganization('granja')" class="flex-1 bg-purple-600 text-white py-2 px-3 rounded text-xs hover:bg-purple-700">
+                    <i class="fas fa-certificate mr-1"></i>
+                    Verificar
+                </button>
+            </div>
+        </div>
+
+        <!-- Volunteer User 2 -->
+        <div class="bg-white rounded-lg shadow-sm p-4">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-purple-600 font-semibold">JP</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">Juan Pablo Morales</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntario</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activo</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">juan.morales@email.com</p>
+                    <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-calendar"></i>
+                            Ene 2024
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-star"></i>
+                            4.9
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('juan')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="sendMessage('juan')" class="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-xs hover:bg-blue-700">
+                    <i class="fas fa-comment mr-1"></i>
+                    Mensaje
+                </button>
+                <button onclick="suspendUser('juan')" class="flex-1 bg-yellow-600 text-white py-2 px-3 rounded text-xs hover:bg-yellow-700">
+                    <i class="fas fa-pause mr-1"></i>
+                    Suspender
+                </button>
+            </div>
+        </div>
+
+        <!-- Suspended User -->
+        <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-400">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-red-600 font-semibold">CM</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">Carlos Mendoza</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntario</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Suspendido</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">carlos.mendoza@email.com</p>
+                    <div class="text-xs text-red-600 mb-2">
+                        <i class="fas fa-exclamation-triangle mr-1"></i>
+                        Suspendido por reportes
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('carlos')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="reactivateUser('carlos')" class="flex-1 bg-green-600 text-white py-2 px-3 rounded text-xs hover:bg-green-700">
+                    <i class="fas fa-play mr-1"></i>
+                    Reactivar
+                </button>
+                <button onclick="banUser('carlos')" class="flex-1 bg-red-600 text-white py-2 px-3 rounded text-xs hover:bg-red-700">
+                    <i class="fas fa-ban mr-1"></i>
+                    Banear
+                </button>
+            </div>
+        </div>
+
+        <!-- Organization Pending Verification -->
+        <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-400">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-building text-yellow-600"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">Hostel Aventura</h3>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Organización</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Pendiente</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">info@hostelaventura.com</p>
+                    <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Guatemala
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-clock"></i>
+                            Hace 3 días
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('hostel')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="verifyOrganization('hostel')" class="flex-1 bg-green-600 text-white py-2 px-3 rounded text-xs hover:bg-green-700">
+                    <i class="fas fa-check mr-1"></i>
+                    Aprobar
+                </button>
+                <button onclick="rejectVerification('hostel')" class="flex-1 bg-red-600 text-white py-2 px-3 rounded text-xs hover:bg-red-700">
+                    <i class="fas fa-times mr-1"></i>
+                    Rechazar
+                </button>
+            </div>
+        </div>
+
+        <!-- More users... -->
+        <div class="bg-white rounded-lg shadow-sm p-4">
+            <div class="flex items-start gap-3 mb-3">
+                <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-teal-600 font-semibold">AR</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1 flex-wrap">
+                        <h3 class="font-semibold text-sm">Ana Ruiz</h3>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Voluntaria</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Activa</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-2 truncate">ana.ruiz@email.com</p>
+                    <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-calendar"></i>
+                            Feb 2024
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <i class="fas fa-star"></i>
+                            5.0
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="viewUserDetails('ana')" class="flex-1 bg-gray-600 text-white py-2 px-3 rounded text-xs hover:bg-gray-700">
+                    <i class="fas fa-eye mr-1"></i>
+                    Ver
+                </button>
+                <button onclick="sendMessage('ana')" class="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-xs hover:bg-blue-700">
+                    <i class="fas fa-comment mr-1"></i>
+                    Mensaje
+                </button>
+                <button onclick="suspendUser('ana')" class="flex-1 bg-yellow-600 text-white py-2 px-3 rounded text-xs hover:bg-yellow-700">
+                    <i class="fas fa-pause mr-1"></i>
+                    Suspender
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Bottom Navigation -->
         <div class="fixed bottom-0 left-0 right-0 bg-white border-t py-2 px-6 flex justify-between items-center">
