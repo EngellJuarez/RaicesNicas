@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Nicas - Panel de Revisiones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex flex-col h-screen text-slate-800">
+        <!-- Header -->
+        <header class="px-4 py-3 bg-white border-b flex items-center gap-3 sticky top-0 z-10">
+            <a href="admin-dashboard.html">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </a>
+            <h1 class="text-xl font-bold text-green-600">Panel de Revisiones</h1>
+            <div class="ml-auto">
+                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">8 pendientes</span>
+            </div>
+        </header>
+
+        <!-- Filters -->
+        <div class="px-4 py-3 bg-white border-b">
+            <div class="flex gap-3 overflow-x-auto pb-2">
+                <button class="bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg text-sm whitespace-nowrap">
+                    Pendientes (8)
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Aprobadas hoy (12)
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Rechazadas (3)
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Todas
+                </button>
+            </div>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="flex-1 overflow-y-auto px-4 py-4 pb-20">
+            <div class="space-y-4">
+                <!-- Pending Review 1 -->
+                <div class="bg-white rounded-lg shadow-sm border-l-4 border-yellow-400">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <h3 class="font-semibold text-lg">Proyecto Educativo Rural San José</h3>
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Pendiente</span>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Enseñanza</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-2">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-building"></i>
+                                        Centro Educativo San José
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Matagalpa, Nicaragua
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-clock"></i>
+                                        Enviado hace 2 horas
+                                    </span>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-3">
+                                    Buscamos voluntarios para enseñar inglés y matemáticas a niños de comunidades rurales. El proyecto incluye alojamiento en familia anfitriona y 3 comidas diarias. Duración mínima: 1 mes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Details -->
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 rounded-lg text-sm">
+                            <div>
+                                <span class="font-medium">Horas/semana:</span> 30h
+                            </div>
+                            <div>
+                                <span class="font-medium">Duración:</span> 1-3 meses
+                            </div>
+                            <div>
+                                <span class="font-medium">Alojamiento:</span> ✓ Incluido
+                            </div>
+                            <div>
+                                <span class="font-medium">Comidas:</span> ✓ Incluidas
+                            </div>
+                        </div>
+
+                        <!-- Admin Notes -->
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                Notas de revisión (opcional)
+                            </label>
+                            <textarea 
+                                rows="2"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
+                                placeholder="Agregar comentarios sobre la revisión..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex gap-2">
+                            <button onclick="approveOpportunity(1)" class="flex-1 bg-green-600 text-white py-2 px-3 rounded text-sm hover:bg-green-700">
+                                <i class="fas fa-check mr-1"></i>
+                                Aprobar y Publicar
+                            </button>
+                            <button onclick="requestChanges(1)" class="flex-1 bg-yellow-600 text-white py-2 px-3 rounded text-sm hover:bg-yellow-700">
+                                <i class="fas fa-edit mr-1"></i>
+                                Solicitar Cambios
+                            </button>
+                            <button onclick="rejectOpportunity(1)" class="bg-red-600 text-white py-2 px-3 rounded text-sm hover:bg-red-700">
+                                <i class="fas fa-times mr-1"></i>
+                                Rechazar
+                            </button>
+                            <button onclick="viewFullDetails(1)" class="bg-gray-600 text-white py-2 px-3 rounded text-sm hover:bg-gray-700">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Review 2 -->
+                <div class="bg-white rounded-lg shadow-sm border-l-4 border-yellow-400">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <h3 class="font-semibold text-lg">Conservación de Tortugas Marinas</h3>
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Pendiente</span>
+                                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Conservación</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-2">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-building"></i>
+                                        Fundación Océanos Limpios
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Rivas, Nicaragua
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-clock"></i>
+                                        Enviado hace 5 horas
+                                    </span>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-3">
+                                    Únete a nuestro proyecto de conservación de tortugas marinas en las playas de Rivas. Actividades incluyen patrullaje nocturno, protección de nidos y educación ambiental.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-4 p-3 bg-gray-50 rounded-lg text-sm">
+                            <div>
+                                <span class="font-medium">Horas/semana:</span> 25h
+                            </div>
+                            <div>
+                                <span class="font-medium">Duración:</span> 2-6 meses
+                            </div>
+                            <div>
+                                <span class="font-medium">Alojamiento:</span> ✓ Incluido
+                            </div>
+                            <div>
+                                <span class="font-medium">Comidas:</span> ✓ Incluidas
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <textarea 
+                                rows="2"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
+                                placeholder="Agregar comentarios sobre la revisión..."
+                            ></textarea>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <button onclick="approveOpportunity(2)" class="flex-1 bg-green-600 text-white py-2 px-3 rounded text-sm hover:bg-green-700">
+                                <i class="fas fa-check mr-1"></i>
+                                Aprobar y Publicar
+                            </button>
+                            <button onclick="requestChanges(2)" class="flex-1 bg-yellow-600 text-white py-2 px-3 rounded text-sm hover:bg-yellow-700">
+                                <i class="fas fa-edit mr-1"></i>
+                                Solicitar Cambios
+                            </button>
+                            <button onclick="rejectOpportunity(2)" class="bg-red-600 text-white py-2 px-3 rounded text-sm hover:bg-red-700">
+                                <i class="fas fa-times mr-1"></i>
+                                Rechazar
+                            </button>
+                            <button onclick="viewFullDetails(2)" class="bg-gray-600 text-white py-2 px-3 rounded text-sm hover:bg-gray-700">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recently Approved -->
+                <div class="bg-white rounded-lg shadow-sm border-l-4 border-green-500">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <h3 class="font-semibold text-lg">Granja Orgánica Familiar</h3>
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Aprobada</span>
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Agricultura</span>
+                                </div>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 mb-2">
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-building"></i>
+                                        Finca Los Naranjos
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <i class="fas fa-check"></i>
+                                        Aprobada hace 1 hora por Admin Engell
+                                    </span>
+                                </div>
+                                <p class="text-sm text-slate-600 mb-3">
+                                    Experiencia de agricultura orgánica en finca familiar. Aprendizaje sobre cultivos sostenibles y vida rural.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                                <div class="text-sm text-green-800">
+                                    <p class="font-medium">Oportunidad aprobada y publicada</p>
+                                    <p>La oportunidad está ahora visible para todos los voluntarios en la plataforma.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white border-t py-2 px-6 flex justify-between items-center">
+            <a href="admin-dashboard.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-home"></i>
+                <span class="text-xs">Inicio</span>
+            </a>
+            <a href="admin-reviews.html" class="flex flex-col items-center gap-1 text-green-600">
+                <i class="fas fa-clipboard-check"></i>
+                <span class="text-xs font-medium">Revisiones</span>
+            </a>
+            <a href="admin-users.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-users"></i>
+                <span class="text-xs">Usuarios</span>
+            </a>
+            <a href="admin-reports.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-chart-bar"></i>
+                <span class="text-xs">Reportes</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function approveOpportunity(id) {
+            if (confirm('¿Aprobar y publicar esta oportunidad?')) {
+                alert('Oportunidad aprobada y publicada exitosamente');
+                location.reload();
+            }
+        }
+
+        function requestChanges(id) {
+            const changes = prompt('Especifica los cambios requeridos:');
+            if (changes && changes.trim()) {
+                alert('Se han solicitado cambios a la organización. Se les notificará por email.');
+                location.reload();
+            }
+        }
+
+        function rejectOpportunity(id) {
+            const reason = prompt('Motivo del rechazo:');
+            if (reason && reason.trim()) {
+                alert('Oportunidad rechazada. Se notificará a la organización.');
+                location.reload();
+            }
+        }
+
+        function viewFullDetails(id) {
+            alert('Aquí se abriría la vista completa con todos los detalles de la oportunidad');
+        }
+    </script>
+</body>
+</html>

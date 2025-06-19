@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Nicas - Explorar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex flex-col h-screen text-slate-800">
+        <!-- Header -->
+        <header class="px-4 py-3 bg-white border-b flex items-center gap-3 sticky top-0 z-10">
+            <a href="index.html">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </a>
+            <h1 class="text-xl font-bold text-green-600">Explorar</h1>
+        </header>
+
+        <!-- Search and Filters -->
+        <div class="px-4 py-4 bg-white border-b space-y-3">
+            <div class="relative">
+                <i class="fas fa-search absolute left-3 top-4 text-slate-400"></i>
+                <input 
+                    type="text" 
+                    placeholder="Buscar destino, organización..."
+                    class="w-full pl-10 py-4 bg-gray-50 rounded-xl border-none focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
+            </div>
+
+            <div class="flex gap-3 overflow-x-auto pb-2">
+                <select class="bg-gray-50 border-none rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>Departamentos</option>
+                    <option>Managua</option>
+                    <option>Granada</option>
+                    <option>León</option>
+                    <option>Rivas</option>
+                    <option>Estelí</option>
+                </select>
+                <select class="bg-gray-50 border-none rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>Duración</option>
+                    <option>1-2 semanas</option>
+                    <option>1-3 meses</option>
+                    <option>3-6 meses</option>
+                    <option>6+ meses</option>
+                </select>
+                <button class="bg-gray-50 border-none rounded-lg px-3 py-2 text-sm flex items-center gap-2">
+                    <i class="fas fa-sliders-h"></i>
+                    Filtros
+                </button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="flex-1 overflow-y-auto px-4 py-4 pb-20">
+            <div class="flex justify-between items-center mb-4">
+                <p class="text-sm text-slate-600">124 oportunidades encontradas</p>
+                <select class="text-sm border border-gray-300 rounded-lg px-2 py-1">
+                    <option>Ordenar</option>
+                    <option>Más recientes</option>
+                    <option>Más populares</option>
+                    <option>Mejor valorados</option>
+                </select>
+            </div>
+
+            <!-- Opportunity Cards -->
+            <div class="space-y-4">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-gradient-to-r from-green-400 to-green-600">
+                        <button class="absolute top-2 right-2 bg-white/80 rounded-full p-2 hover:bg-white">
+                            <i class="far fa-heart text-slate-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center gap-1 text-sm text-slate-500 mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Managua, Nicaragua</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Proyecto Educativo Rural</h4>
+                        <p class="text-sm text-slate-600 mb-4">
+                            Enseña inglés y matemáticas a niños en comunidades rurales mientras experimentas la cultura local.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded-full text-sm">30h/semana</span>
+                            <span class="text-sm font-medium">Alojamiento + Comidas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-gradient-to-r from-amber-400 to-amber-600">
+                        <button class="absolute top-2 right-2 bg-white/80 rounded-full p-2 hover:bg-white">
+                            <i class="far fa-heart text-slate-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center gap-1 text-sm text-slate-500 mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Granada, Nicaragua</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Construcción Comunitaria</h4>
+                        <p class="text-sm text-slate-600 mb-4">
+                            Participa en la construcción de viviendas para familias de bajos recursos en comunidades rurales.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="bg-red-50 text-red-700 border border-red-200 px-3 py-1 rounded-full text-sm">35h/semana</span>
+                            <span class="text-sm font-medium">Alojamiento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-48 bg-gradient-to-r from-teal-400 to-teal-600">
+                        <button class="absolute top-2 right-2 bg-white/80 rounded-full p-2 hover:bg-white">
+                            <i class="far fa-heart text-slate-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center gap-1 text-sm text-slate-500 mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>León, Nicaragua</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Proyecto de Reciclaje y Gestión Sostenible de Residuos</h4>
+                        <p class="text-sm text-slate-600 mb-4">
+                            Participa en campañas de reciclaje y educación ambiental para reducir la contaminación,
+                            promover el uso responsable de los recursos y fomentar prácticas sostenibles en la comunidad.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="bg-purple-50 text-purple-700 border border-purple-200 px-3 py-1 rounded-full text-sm">25h/semana</span>
+                            <span class="text-sm font-medium">Alojamiento + Comidas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white border-t py-2 px-6 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-home"></i>
+                <span class="text-xs">Inicio</span>
+            </a>
+            <a href="explorar.html" class="flex flex-col items-center gap-1 text-green-600">
+                <i class="fas fa-compass"></i>
+                <span class="text-xs font-medium">Explorar</span>
+            </a>
+            <a href="mensajes.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-comment"></i>
+                <span class="text-xs">Mensajes</span>
+            </a>
+            <a href="guardados.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-bookmark"></i>
+                <span class="text-xs">Guardados</span>
+            </a>
+            <a href="perfil.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-user"></i>
+                <span class="text-xs">Perfil</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

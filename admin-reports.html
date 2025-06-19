@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Nicas - Reportes y Estadísticas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex flex-col h-screen text-slate-800">
+        <!-- Header -->
+        <header class="px-4 py-3 bg-white border-b flex items-center gap-3 sticky top-0 z-10">
+            <a href="admin-dashboard.html">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </a>
+            <h1 class="text-xl font-bold text-green-600">Reportes y Estadísticas</h1>
+            <div class="ml-auto">
+                <button class="bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700">
+                    <i class="fas fa-download mr-1"></i>
+                    Exportar
+                </button>
+            </div>
+        </header>
+
+        <!-- Time Period Selector -->
+        <div class="px-4 py-3 bg-white border-b">
+            <div class="flex gap-3 overflow-x-auto pb-2">
+                <button class="bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm whitespace-nowrap">
+                    Últimos 7 días
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Último mes
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Últimos 3 meses
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Este año
+                </button>
+                <button class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm whitespace-nowrap hover:bg-gray-200">
+                    Personalizado
+                </button>
+            </div>
+        </div>
+
+        <!-- Reports Content -->
+        <div class="flex-1 overflow-y-auto px-4 py-4 pb-20">
+            <!-- Key Metrics -->
+            <div class="mb-6">
+                <h2 class="text-lg font-semibold mb-3">Métricas principales</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-users text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-blue-600">+47</div>
+                                <div class="text-sm text-slate-600">Nuevos usuarios</div>
+                                <div class="text-xs text-green-600">+12% vs semana anterior</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clipboard-list text-green-600"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-green-600">23</div>
+                                <div class="text-sm text-slate-600">Oportunidades publicadas</div>
+                                <div class="text-xs text-green-600">+8% vs semana anterior</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-handshake text-purple-600"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-purple-600">156</div>
+                                <div class="text-sm text-slate-600">Postulaciones</div>
+                                <div class="text-xs text-green-600">+23% vs semana anterior</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-star text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-yellow-600">4.8</div>
+                                <div class="text-sm text-slate-600">Calificación promedio</div>
+                                <div class="text-xs text-green-600">+0.2 vs semana anterior</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Growth Chart -->
+            <div class="bg-white rounded-lg p-4 shadow-sm mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-semibold">Crecimiento de usuarios</h3>
+                    <div class="flex gap-2 text-xs">
+                        <div class="flex items-center gap-1">
+                            <div class="w-3 h-3 bg-blue-500 rounded"></div>
+                            <span>Voluntarios</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <div class="w-3 h-3 bg-green-500 rounded"></div>
+                            <span>Organizaciones</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Simulated Chart -->
+                <div class="h-32 bg-gray-50 rounded-lg flex items-end justify-between p-4">
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 60px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 20px;"></div>
+                        <span class="text-xs text-slate-500">Lun</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 45px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 15px;"></div>
+                        <span class="text-xs text-slate-500">Mar</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 70px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 25px;"></div>
+                        <span class="text-xs text-slate-500">Mié</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 55px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 18px;"></div>
+                        <span class="text-xs text-slate-500">Jue</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 80px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 30px;"></div>
+                        <span class="text-xs text-slate-500">Vie</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 65px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 22px;"></div>
+                        <span class="text-xs text-slate-500">Sáb</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1">
+                        <div class="w-6 bg-blue-500 rounded-t" style="height: 50px;"></div>
+                        <div class="w-6 bg-green-500 rounded-t" style="height: 16px;"></div>
+                        <span class="text-xs text-slate-500">Dom</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Distribution -->
+            <div class="bg-white rounded-lg p-4 shadow-sm mb-6">
+                <h3 class="font-semibold mb-4">Distribución por categorías</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded"></div>
+                            <span class="text-sm">Agricultura</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="w-16 h-2 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm font-medium">32%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-blue-500 rounded"></div>
+                            <span class="text-sm">Enseñanza</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="w-14 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm font-medium">28%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-amber-500 rounded"></div>
+                            <span class="text-sm">Hostelería</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="w-10 h-2 bg-amber-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm font-medium">20%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-purple-500 rounded"></div>
+                            <span class="text-sm">Conservación</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="w-6 h-2 bg-purple-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm font-medium">12%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-red-500 rounded"></div>
+                            <span class="text-sm">Construcción</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-2 bg-gray-200 rounded-full">
+                                <div class="w-4 h-2 bg-red-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm font-medium">8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geographic Distribution -->
+            <div class="bg-white rounded-lg p-4 shadow-sm mb-6">
+                <h3 class="font-semibold mb-4">Distribución geográfica</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-flag text-green-600"></i>
+                            <span class="text-sm">Costa Rica</span>
+                        </div>
+                        <span class="text-sm font-medium">45 oportunidades</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-flag text-blue-600"></i>
+                            <span class="text-sm">Nicaragua</span>
+                        </div>
+                        <span class="text-sm font-medium">32 oportunidades</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-flag text-yellow-600"></i>
+                            <span class="text-sm">Guatemala</span>
+                        </div>
+                        <span class="text-sm font-medium">28 oportunidades</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-flag text-red-600"></i>
+                            <span class="text-sm">Perú</span>
+                        </div>
+                        <span class="text-sm font-medium">18 oportunidades</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-flag text-purple-600"></i>
+                            <span class="text-sm">Otros países</span>
+                        </div>
+                        <span class="text-sm font-medium">12 oportunidades</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Organizations -->
+            <div class="bg-white rounded-lg p-4 shadow-sm mb-6">
+                <h3 class="font-semibold mb-4">Organizaciones más activas</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-green-600 font-semibold text-xs">1</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-medium text-sm">Granja Ecológica</h4>
+                            <p class="text-xs text-slate-500">15 oportunidades • 4.9★</p>
+                        </div>
+                        <span class="text-sm font-medium text-green-600">89 voluntarios</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-semibold text-xs">2</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-medium text-sm">Centro Educativo San José</h4>
+                            <p class="text-xs text-slate-500">12 oportunidades • 4.7★</p>
+                        </div>
+                        <span class="text-sm font-medium text-blue-600">67 voluntarios</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                            <span class="text-purple-600 font-semibold text-xs">3</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-medium text-sm">Fundación Océanos Limpios</h4>
+                            <p class="text-xs text-slate-500">8 oportunidades • 4.8★</p>
+                        </div>
+                        <span class="text-sm font-medium text-purple-600">45 voluntarios</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Summary -->
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+                <h3 class="font-semibold mb-4">Resumen de actividad reciente</h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>23 nuevas oportunidades publicadas esta semana</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span>156 postulaciones enviadas</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span>89 conexiones exitosas realizadas</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                        <span>47 nuevos usuarios registrados</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <span>3 organizaciones verificadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white border-t py-2 px-6 flex justify-between items-center">
+            <a href="admin-dashboard.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-home"></i>
+                <span class="text-xs">Inicio</span>
+            </a>
+            <a href="admin-reviews.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-clipboard-check"></i>
+                <span class="text-xs">Revisiones</span>
+            </a>
+            <a href="admin-users.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-green-600">
+                <i class="fas fa-users"></i>
+                <span class="text-xs">Usuarios</span>
+            </a>
+            <a href="admin-reports.html" class="flex flex-col items-center gap-1 text-green-600">
+                <i class="fas fa-chart-bar"></i>
+                <span class="text-xs font-medium">Reportes</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

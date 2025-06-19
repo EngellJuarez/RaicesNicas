@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces Nicas - Registro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="flex justify-center items-center gap-2 mb-6">
+                <img src="logo.png" alt="Logo" class="w-8 md:w-10 lg:w-12 h-auto max-w-[80px] object-contain">
+                <h1 class="text-3xl font-bold text-green-600">Raíces Nicas</h1>
+            </div>
+            <h2 class="text-center text-2xl font-bold text-gray-900">
+                Crear cuenta nueva
+            </h2>
+            <p class="mt-2 text-center text-sm text-gray-600">
+                Únete a nuestra comunidad de voluntariado
+            </p>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
+                <!-- User Type Selection -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-3">
+                        ¿Cómo quieres usar Raíces Nicas?
+                    </label>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="userType" value="volunteer" class="text-green-600 focus:ring-green-500" checked>
+                            <div class="ml-3">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-user text-blue-600"></i>
+                                    <span class="font-medium">Soy Voluntario</span>
+                                </div>
+                                <p class="text-sm text-gray-500">Quiero encontrar oportunidades de voluntariado</p>
+                            </div>
+                        </label>
+                        
+                        <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                            <input type="radio" name="userType" value="organization" class="text-green-600 focus:ring-green-500">
+                            <div class="ml-3">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-building text-green-600"></i>
+                                    <span class="font-medium">Soy Organización/Anfitrión</span>
+                                </div>
+                                <p class="text-sm text-gray-500">Quiero publicar oportunidades de voluntariado</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <form class="space-y-6" id="registerForm">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700">
+                                Nombre
+                            </label>
+                            <input 
+                                id="firstName" 
+                                name="firstName" 
+                                type="text" 
+                                required 
+                                class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                                placeholder="Engell"
+                            >
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700">
+                                Apellido
+                            </label>
+                            <input 
+                                id="lastName" 
+                                name="lastName" 
+                                type="text" 
+                                required 
+                                class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                                placeholder="Juarez"
+                            >
+                        </div>
+                    </div>
+
+                    <div id="organizationFields" class="hidden space-y-4">
+                        <div>
+                            <label for="orgName" class="block text-sm font-medium text-gray-700">
+                                Nombre de la Organización
+                            </label>
+                            <input 
+                                id="orgName" 
+                                name="orgName" 
+                                type="text" 
+                                class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                                placeholder="Mi Organización"
+                            >
+                        </div>
+                        <div>
+                            <label for="orgType" class="block text-sm font-medium text-gray-700">
+                                Tipo de Organización
+                            </label>
+                            <select 
+                                id="orgType" 
+                                name="orgType" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-green-500 focus:border-green-500"
+                            >
+                                <option value="">Seleccionar...</option>
+                                <option value="ngo">ONG</option>
+                                <option value="farm">Granja/Finca</option>
+                                <option value="hostel">Hostel/Alojamiento</option>
+                                <option value="school">Centro Educativo</option>
+                                <option value="conservation">Conservación</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">
+                            Correo electrónico
+                        </label>
+                        <input 
+                            id="email" 
+                            name="email" 
+                            type="email" 
+                            required 
+                            class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                            placeholder="tu@email.com"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">
+                            Contraseña
+                        </label>
+                        <input 
+                            id="password" 
+                            name="password" 
+                            type="password" 
+                            required 
+                            class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                            placeholder="••••••••"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700">
+                            Confirmar Contraseña
+                        </label>
+                        <input 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            type="password" 
+                            required 
+                            class="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500"
+                            placeholder="••••••••"
+                        >
+                    </div>
+
+                    <div class="flex items-center">
+                        <input 
+                            id="terms" 
+                            name="terms" 
+                            type="checkbox" 
+                            required
+                            class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                        >
+                        <label for="terms" class="ml-2 block text-sm text-gray-900">
+                            Acepto los <a href="#" class="text-green-600 hover:text-green-500">términos y condiciones</a>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button 
+                            type="submit" 
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                        >
+                            Crear Cuenta
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6 text-center">
+                    <span class="text-sm text-gray-600">
+                        ¿Ya tienes cuenta? 
+                        <a href="login.html" class="font-medium text-green-600 hover:text-green-500">
+                            Iniciar sesión
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle organization fields
+        document.querySelectorAll('input[name="userType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const orgFields = document.getElementById('organizationFields');
+                if (this.value === 'organization') {
+                    orgFields.classList.remove('hidden');
+                } else {
+                    orgFields.classList.add('hidden');
+                }
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+            
+            const userType = document.querySelector('input[name="userType"]:checked').value;
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            
+            // Simular registro exitoso
+            localStorage.setItem('userType', userType);
+            localStorage.setItem('userName', firstName + ' ' + lastName);
+            
+            if (userType === 'organization') {
+                alert('¡Registro exitoso! Tu cuenta será revisada por nuestro equipo. Te notificaremos cuando esté aprobada.');
+                window.location.href = 'login.html';
+            } else {
+                alert('¡Registro exitoso! Bienvenido a Raíces Nicas.');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
